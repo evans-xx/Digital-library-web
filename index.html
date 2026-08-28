@@ -1,6 +1,64 @@
-    git init
-    git add .
-    git commit -m "First version of landing page"
-    git branch -M main
-    git remote add origin https://github.com/YOUR-USERNAME/digital-library-web.git
-    git push -u origin main
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Academic Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h2 class="logo">Digital Academic Library</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Access Learning Materials Anytime</h1>
+      <p>Textbooks, Notes, Past Papers & Audio Lectures in one app</p>
+      <button onclick="scrollToSection('contact')">Get Started</button>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>The Problem</h2>
+    <p>Students struggle with expensive textbooks and scattered notes. Our solution is a mobile + web app that gives organized access to academic materials with offline support.</p>
+  </section>
+
+  <section id="features">
+    <h2>Key Features</h2>
+    <div class="feature-grid">
+      <div class="card">📚 Academic Library</div>
+      <div class="card">🔍 Smart Search</div>
+      <div class="card">🎙️ Audio Lectures</div>
+      <div class="card">📱 Offline Access</div>
+      <div class="card">⬆️ Upload Portal</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Join the Waitlist</h2>
+    <form action="contact.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <select name="level" required>
+        <option value="">Select Level</option>
+        <option>High School</option>
+        <option>College</option>
+        <option>University</option>
+      </select>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p id="msg"></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Digital Academic Library | Semester Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
