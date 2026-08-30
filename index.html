@@ -27,6 +27,19 @@
     <h2>The Problem</h2>
     <p>Students struggle with expensive textbooks and scattered notes. Our solution is a mobile + web app that gives organized access to academic materials with offline support.</p>
   </section>
+<?php
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $role = $_POST['role'];
+    
+    // For now we just redirect back with success message
+    // Later you can add: save to database, send email, etc.
+    
+    header("Location: index.html?status=success");
+    exit();
+}
+?>
 
   <section id="features">
     <h2>Key Features</h2>
